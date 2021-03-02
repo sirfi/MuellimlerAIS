@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D3EBBAB-1B81-421A-BE65-FE5CD14963C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MuellimlerAIS</RootNamespace>
+    <AssemblyName>MuellimlerAIS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MuellimlerAIS.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Db4objects.Db4o">
+      <HintPath>..\packages\db4o-devel.8.1.184.15492\lib\net40\Db4objects.Db4o.dll</HintPath>
+    </Reference>
+    <Reference Include="Db4objects.Db4o.Data.Services">
+      <HintPath>..\packages\db4o-devel.8.1.184.15492\lib\net40\Db4objects.Db4o.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Db4objects.Db4o.Linq">
+      <HintPath>..\packages\db4o-devel.8.1.184.15492\lib\net40\Db4objects.Db4o.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Reflection">
+      <HintPath>..\packages\db4o-devel.8.1.184.15492\lib\net40\Mono.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAna.Designer.cs">
+      <DependentUpon>FormAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDersler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDersler.Designer.cs">
+      <DependentUpon>FormDersler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDiller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiller.Designer.cs">
+      <DependentUpon>FormDiller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFakulteler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFakulteler.Designer.cs">
+      <DependentUpon>FormFakulteler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiris.Designer.cs">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHaqqinda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHaqqinda.Designer.cs">
+      <DependentUpon>FormHaqqinda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIxtisasDersleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIxtisasDersleri.Designer.cs">
+      <DependentUpon>FormIxtisasDersleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIxtisaslar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIxtisaslar.Designer.cs">
+      <DependentUpon>FormIxtisaslar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIxtisasQruplari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIxtisasQruplari.Designer.cs">
+      <DependentUpon>FormIxtisasQruplari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKafedralar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKafedralar.Designer.cs">
+      <DependentUpon>FormKafedralar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonferanslar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonferanslar.Designer.cs">
+      <DependentUpon>FormKonferanslar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMuelliminBildiyiDiller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuelliminBildiyiDiller.Designer.cs">
+      <DependentUpon>FormMuelliminBildiyiDiller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMuelliminDeyeBildiyiDersler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuelliminDeyeBildiyiDersler.Designer.cs">
+      <DependentUpon>FormMuelliminDeyeBildiyiDersler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMuellimKitablari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuellimKitablari.Designer.cs">
+      <DependentUpon>FormMuellimKitablari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMuellimler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuellimler.Designer.cs">
+      <DependentUpon>FormMuellimler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMuellimMeqaleleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuellimMeqaleleri.Designer.cs">
+      <DependentUpon>FormMuellimMeqaleleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMuellimSorgulamalari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuellimSorgulamalari.Designer.cs">
+      <DependentUpon>FormMuellimSorgulamalari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMuellimTehsili.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuellimTehsili.Designer.cs">
+      <DependentUpon>FormMuellimTehsili.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUniversitetRektorVeProrektorleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUniversitetRektorVeProrektorleri.Designer.cs">
+      <DependentUpon>FormUniversitetRektorVeProrektorleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlMuellim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMuellim.Designer.cs">
+      <DependentUpon>UserControlMuellim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMuelliminBildiyiDil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMuelliminBildiyiDil.Designer.cs">
+      <DependentUpon>UserControlMuelliminBildiyiDil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMuelliminDeyeBildiyiDers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMuelliminDeyeBildiyiDers.Designer.cs">
+      <DependentUpon>UserControlMuelliminDeyeBildiyiDers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAna.resx">
+      <DependentUpon>FormAna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDersler.resx">
+      <DependentUpon>FormDersler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiller.resx">
+      <DependentUpon>FormDiller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFakulteler.resx">
+      <DependentUpon>FormFakulteler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiris.resx">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHaqqinda.resx">
+      <DependentUpon>FormHaqqinda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIxtisasDersleri.resx">
+      <DependentUpon>FormIxtisasDersleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIxtisaslar.resx">
+      <DependentUpon>FormIxtisaslar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIxtisasQruplari.resx">
+      <DependentUpon>FormIxtisasQruplari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKafedralar.resx">
+      <DependentUpon>FormKafedralar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMuelliminBildiyiDiller.resx">
+      <DependentUpon>FormMuelliminBildiyiDiller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMuelliminDeyeBildiyiDersler.resx">
+      <DependentUpon>FormMuelliminDeyeBildiyiDersler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMuellimKitablari.resx">
+      <DependentUpon>FormMuellimKitablari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMuellimler.resx">
+      <DependentUpon>FormMuellimler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMuellimMeqaleleri.resx">
+      <DependentUpon>FormMuellimMeqaleleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMuellimSorgulamalari.resx">
+      <DependentUpon>FormMuellimSorgulamalari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMuellimTehsili.resx">
+      <DependentUpon>FormMuellimTehsili.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUniversitetRektorVeProrektorleri.resx">
+      <DependentUpon>FormUniversitetRektorVeProrektorleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlMuellim.resx">
+      <DependentUpon>UserControlMuellim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMuelliminBildiyiDil.resx">
+      <DependentUpon>UserControlMuelliminBildiyiDil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMuelliminDeyeBildiyiDers.resx">
+      <DependentUpon>UserControlMuelliminDeyeBildiyiDers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MuellimlerAIS.Libs\MuellimlerAIS.Libs.csproj">
+      <Project>{428aa18c-4238-450a-a916-b310063eb7b2}</Project>
+      <Name>MuellimlerAIS.Libs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuellimlerAIS.VerilenlerStrukturlari\MuellimlerAIS.VerilenlerStrukturlari.csproj">
+      <Project>{67049baa-629f-4753-a629-b27bfc077b30}</Project>
+      <Name>MuellimlerAIS.VerilenlerStrukturlari</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
